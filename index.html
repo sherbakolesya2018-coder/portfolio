@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Моё портфолио</title>
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-gray-900">
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="description"
+    content="Портфолио Олеси Щербак — UX/UI-дизайн цифровых продуктов для web и mobile."
+  >
+  <title>Щербак Олеся — UX/UI Designer</title>
+
+  <!-- Шрифт. Всё оформление элементов ниже выполнено классами Tailwind. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- Tailwind CSS через CDN, как в исходной структуре. -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body id="top" class="bg-white font-['Inter',sans-serif] text-[#111111] antialiased">
+
+  <!--
+    Адаптивность:
+    классы без префикса — мобильный макет;
+    md: — десктопный макет при ширине от 768 px включительно.
+  -->
+
+  <!-- Шапка -->
+  <header class="border-b border-[#eeeeee]">
+    <div
+      class="flex h-[70px] items-center justify-between gap-4 px-4
+             md:h-20 md:px-8"
+    >
+      <!-- Имя ведёт к началу страницы. -->
+      <a
+        href="#top"
+        class="shrink-0 whitespace-nowrap rounded-sm text-base font-bold leading-5
+               focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4
+               md:font-semibold"
+      >
+        Щербак Олеся
+      </a>
+
+      <nav aria-label="Основная навигация" class="flex shrink-0 items-center gap-6">
+        <!--
+          Ссылки подготовлены для будущих секций с id="projects" и id="contacts".
+          Вместо #contacts можно указать свой адрес в Telegram или mailto:.
+        -->
+        <a
+          href="#projects"
+          class="hidden rounded-sm text-base leading-5 text-[#626a76]
+                 transition-colors hover:text-[#111111]
+                 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4
+                 md:inline-flex"
+        >
+          Проекты
+        </a>
+
+        <a
+          href="#contacts"
+          class="inline-flex items-center justify-center whitespace-nowrap rounded-full
+                 bg-[#111111] px-4 py-[9px] text-base font-bold leading-5 text-white
+                 transition-colors hover:bg-[#333333]
+                 focus-visible:outline focus-visible:outline-2
+                 focus-visible:outline-offset-4 focus-visible:outline-[#111111]
+                 md:px-5 md:py-2.5 md:font-semibold"
+        >
+          Контакты
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero: одна колонка по центру на всех экранах. -->
+    <section
+      aria-labelledby="hero-title"
+      class="mx-auto flex w-full max-w-[1920px] flex-col items-center
+             px-4 pb-5 pt-5 text-center md:px-8 md:pb-24 md:pt-[34px]"
+    >
+      <!--
+        Портрет из макета включён в архив: portrait.svg.
+        Для замены фотографии укажите в src путь к своему JPG, PNG или WebP.
+        Размеры: 90 × 90 px на мобильном, 192 × 192 px на десктопе.
+      -->
+      <img
+        src="./Портрет.png"
+        alt="Олеся Щербак — UX/UI-дизайнер"
+        width="192"
+        height="192"
+        fetchpriority="high"
+        class="h-[90px] w-[90px] shrink-0 rounded-xl bg-[#f6f6f6] object-cover
+               md:h-48 md:w-48"
+      >
+
+      <h1
+        id="hero-title"
+        class="mt-2 text-xl font-normal leading-7 text-black
+               md:mt-4 md:text-[40px] md:leading-[48px]"
+      >
+        Привет, я Олеся
+      </h1>
+
+      <p class="text-base leading-6 text-[#7f7f7f] md:text-2xl md:leading-8">
+        UX/UI Designer
+      </p>
+
+      <!--
+        На десктопе сохраняем три строки из макета.
+        На мобильном span остаются строчными: текст переносится по ширине экрана.
+      -->
+      <p
+        class="mt-1 w-full max-w-[350px] text-base leading-[19px] text-[#74777d]
+               md:mt-4 md:max-w-[680px] md:text-2xl md:leading-[29px]"
+      >
+        <span class="md:block">Проектирую цифровые продукты для web и mobile,</span>
+        <span class="md:block">превращая сложные задачи в понятные и удобные</span>
+        <span class="md:block">интерфейсы.</span>
+      </p>
+
+      <!--
+        Метки — обычный список, не кнопки.
+        На мобильном ограничиваем ширину и разрешаем перенос.
+        На десктопе все шесть меток располагаются в одной строке.
+      -->
+      <ul
+        aria-label="Опыт и направления работы"
+        class="mt-4 flex w-full max-w-[320px] flex-wrap items-center justify-center
+               gap-2 text-sm leading-[18px] text-[#626a76]
+               md:mt-6 md:max-w-none md:flex-nowrap md:gap-2.5 md:leading-4"
+      >
+        <li class="whitespace-nowrap rounded-full border border-[#eaeaea] px-[11px] py-2 md:px-3.5">
+          2 года опыта
+        </li>
+        <li class="whitespace-nowrap rounded-full border border-[#eaeaea] px-[11px] py-2 md:px-3.5">
+          Mobile
+        </li>
+        <li class="whitespace-nowrap rounded-full border border-[#eaeaea] px-[11px] py-2 md:px-3.5">
+          Web
+        </li>
+        <li class="whitespace-nowrap rounded-full border border-[#eaeaea] px-[11px] py-2 md:px-3.5">
+          B2B
+        </li>
+        <li class="whitespace-nowrap rounded-full border border-[#eaeaea] px-[11px] py-2 md:px-3.5">
+          B2C
+        </li>
+        <li class="whitespace-nowrap rounded-full border border-[#eaeaea] px-[11px] py-2 md:px-3.5">
+          Vibe coding
+        </li>
+      </ul>
+    </section>
+
+    <!-- Следующие секции сайта можно добавить здесь. -->
+  </main>
+
+</body>
+</html>
+
+</body>
+</html>
